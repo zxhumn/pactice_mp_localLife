@@ -1,0 +1,17 @@
+<view class="cell">
+  <view class="img">
+    <image src="{{shops.images[0]}}"></image>
+  </view>
+  <view class="content">
+    <text class="title">{{shops.name}}</text>
+    <text>电话：{{shops.phone}}</text>
+    <text>地址：{{shops.address}}</text>
+    <text>营业时间：{{shops.businessHours}}</text>
+   
+  
+  </view>
+   <!-- 评分 -->
+  <view class="score">
+    {{shops.score}}
+  </view>
+</view>

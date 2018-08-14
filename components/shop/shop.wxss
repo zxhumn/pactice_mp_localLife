@@ -1,0 +1,39 @@
+/* components/shop/shop.wxss */
+.cell{
+  display:flex;
+  position:relative;
+}
+.cell .img {
+   height: 160rpx;
+   min-width:160rpx;
+}
+.cell .img image {
+  height:100%;
+  width:100%;
+}
+.cell .content {
+  font-size: 26rpx;
+  display:flex;
+  flex-direction: column;
+  color:#678;
+  padding:10rpx 20rpx;
+  
+  
+}
+.cell .title {
+  font-size: 30rpx;
+  color:#234;
+   
+ 
+}
+.score {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  font-size: 24rpx;
+  background-color: #ee523d;
+  color: white;
+  padding: 0rpx 10rpx;
+  border-radius: 30rpx;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+<view>
+<!-- 轮播图 -->
+
+<swiper class="slides" indicator-dots="{{true}}"
+  autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}" indicator-active-color="#ffffff" circular="{{true}}">
+  <block wx:for="{{shop.images}}" wx:key="{{*this}}"  >
+    <swiper-item>
+      <image bindtap="previewImg" data-current="{{item}}" src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 描述 -->
+  <view class="decription">
+    <text class="name">{{shop.name}}</text>
+    <text>电话：{{shop.phone}}</text>
+    <text>地址：{{shop.address}}</text>
+    <text>营业时间：{{shop.businessHours}}</text>
+    <view class="score">{{shop.score}}</view>
+  </view>
+<!-- 评价 -->
+<view wx:key="item.id" class="comment" wx:for="{{shop.comments}}">
+    <text class="name">{{item.name}}</text>
+    <text class="date">{{item.date}}</text>
+    <text class="rating">{{item.rating}}</text>
+    <text>{{item.content}}</text>
+    <view class="images">
+      <image wx:key="*this" wx:for="{{item.images}}" src="{{m1.replaceStr(item)}}"></image>
+    </view>
+  </view>
+</view>
+<wxs module="m1">
+module.exports.replaceStr = function(frmStr){
+return frmStr.replace('w.h','100.100');
+}
+</wxs>

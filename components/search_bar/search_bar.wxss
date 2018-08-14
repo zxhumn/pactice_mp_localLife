@@ -1,0 +1,2 @@
+/* components/search_bar/search_bar.wxss */
+@import './weui-searchbar.wxss';
